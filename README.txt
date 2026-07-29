@@ -3,8 +3,8 @@
 1. 압축을 풀어 나온 파일과 assets 폴더를 모두 GitHub 저장소 최상위에 올려주세요.
 2. GitHub 저장소의 Settings > Pages에서 배포 브랜치를 선택하면 홈페이지가 게시됩니다.
 3. index.html이 홈페이지이며 admin.html이 관리자 화면입니다.
-4. iamch094-jpg.github.io 저장소 최상위에 올리면 관리자 주소는
-   https://iamch094-jpg.github.io/admin.html 입니다.
+4. gguljam 저장소 최상위에 올리면 관리자 주소는
+   https://iamch094-jpg.github.io/gguljam/admin.html 입니다.
 4. 모든 실시간 예약 버튼은 아래 신청서의 예약 링크로 연결되어 있습니다.
    https://booking.ddnayo.com/?accommodationId=106656
 
@@ -19,7 +19,7 @@
 - 관리자 로그인 아이디: iamch94
 - 관리자 로그인 비밀번호: 04560123
 - 관리자 'GitHub 연결' 메뉴에 저장소 정보와 Fine-grained token을 저장하면 수정 내용을 GitHub Pages에 직접 반영할 수 있습니다.
-- 저장소 소유자 iamch094-jpg, 저장소 이름 iamch094-jpg.github.io, 브랜치 main이 기본 입력되어 있습니다.
+- 저장소 소유자 iamch094-jpg, 저장소 이름 gguljam, 브랜치 main이 기본 입력되어 있습니다.
 - GitHub 토큰에는 대상 저장소의 Contents 권한을 Read and write로 부여해야 합니다.
 - GitHub 토큰은 브라우저에만 저장되고 ZIP이나 설정 백업에는 포함되지 않습니다.
 

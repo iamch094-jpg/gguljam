@@ -11,12 +11,12 @@
     "assets/images/exterior/exterior-04.webp",
     "assets/images/exterior/exterior-05.webp"
   ];
-  let githubConfig = {owner:"iamch094-jpg", repo:"iamch094-jpg.github.io", branch:"main", token:""};
+  let githubConfig = {owner:"iamch094-jpg", repo:"gguljam", branch:"main", token:""};
   try {
     githubConfig = {...githubConfig, ...JSON.parse(localStorage.getItem(githubConfigKey) || "{}")};
   } catch (_) {}
   if (!githubConfig.owner || githubConfig.owner === "iamch94") githubConfig.owner = "iamch094-jpg";
-  if (!githubConfig.repo) githubConfig.repo = "iamch094-jpg.github.io";
+  if (!githubConfig.repo || githubConfig.repo === "iamch094-jpg.github.io") githubConfig.repo = "gguljam";
   let content = structuredClone(window.GGULJAM_DEFAULT);
   try {
     const savedContent = JSON.parse(localStorage.getItem(storageKey));
@@ -194,7 +194,7 @@
     $("[data-panel=github]").innerHTML = `<div class="form-sections">${
       section("GitHub 저장소 연결", "배포한 GitHub 저장소 정보를 입력하면 관리자 수정 내용을 사이트에 직접 반영할 수 있습니다.",
         field("저장소 소유자", "github.owner", githubConfig.owner, {help:"기본값: iamch094-jpg"}) +
-        field("저장소 이름", "github.repo", githubConfig.repo, {help:"기본값: iamch094-jpg.github.io"}) +
+        field("저장소 이름", "github.repo", githubConfig.repo, {help:"기본값: gguljam"}) +
         field("배포 브랜치", "github.branch", githubConfig.branch || "main") +
         `<label class="admin-field"><span>GitHub 토큰</span><input type="password" id="githubToken" value="${escapeHtml(githubConfig.token)}" autocomplete="off"><small>Fine-grained token의 Contents 권한을 Read and write로 설정해 주세요.</small></label>
         <div class="wide-field github-security-note"><strong>토큰 저장 안내</strong><p>토큰은 이 브라우저에만 저장되며 ZIP과 설정 백업에는 포함되지 않습니다. 공용 PC에서는 사용하지 마세요.</p></div>
@@ -274,7 +274,8 @@
         throw new Error(await githubErrorMessage(current));
       }
 
-      const fileText = `window.GGULJAM_DEFAULT = ${JSON.stringify(content, null, 2)};\\n`;
+      const fileText = `window.GGULJAM_DEFAULT = ${JSON.stringify(content, null, 2)};
+`;
       const payload = {
         message: `Update Gguljam website content ${new Date().toISOString().slice(0, 10)}`,
         content: utf8ToBase64(fileText),

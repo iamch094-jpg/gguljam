@@ -77,7 +77,13 @@ window.GGULJAM_DEFAULT = {
     title: "경주에서 만나는\n고요한 한옥의 밤",
     body: "예약과 이용 문의는 전화 또는 실시간 예약에서 편하게 확인해 주세요.",
     buttonLabel: "실시간 예약"
+  }, {
+    id: "reservation-contact-20260729",
+    enabled: true,
+    image: "assets/images/exterior/exterior-03.webp",
+    eyebrow: "📞 RESERVATION",
+    title: "✨ 예약문의 ✨",
+    body: "편안한 예약 상담\n📱 010-8530-7056",
+    buttonLabel: "실시간 예약"
   }]
 };
-
-// GitHub Pages refresh: 2026-07-29

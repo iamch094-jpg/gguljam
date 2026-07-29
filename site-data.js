@@ -79,3 +79,5 @@ window.GGULJAM_DEFAULT = {
     buttonLabel: "실시간 예약"
   }]
 };
+
+// GitHub Pages refresh: 2026-07-29
